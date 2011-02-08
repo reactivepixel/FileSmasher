@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Interesting blog</title>
+		<title>File Smasher Tool</title>
 		<?php
 		/* 	Usage */
 			require_once('combine.php');
