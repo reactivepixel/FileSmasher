@@ -1,0 +1,20 @@
+.styleOne{
+	margin: 5em;
+	min-height: 5em;
+	/*Rounded Corners   */
+	 -moz-border-radius: 6px; /* FF1+ */
+  -webkit-border-radius: 6px; /* Saf3-4 */
+          border-radius: 6px; /* Opera 10.5, IE9, Saf5, Chrome */
+
+	/*Box Shadow   */       
+-moz-box-shadow: 0px 0px 4px #050505; /* FF3.5+ */
+  -webkit-box-shadow: 0px 0px 4px #050505; /* Saf3.0+, Chrome */
+          box-shadow: 0px 0px 4px #050505; /* Opera 10.5, IE9 */
+
+	/* Gradient Shadow   */ 
+  background-color: #444444;
+  background-image: -moz-linear-gradient(top, #444444, #999999); /* FF3.6 */
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #444444),color-stop(1, #999999)); /* Saf4+, Chrome */
+  background-image: linear-gradient(top, #444444, #999999);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#444444', EndColorStr='#999999'); /* IE6ÐIE9 */
+}

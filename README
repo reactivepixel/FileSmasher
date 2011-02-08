@@ -5,3 +5,8 @@
 /_/   \___/\__,_/\___/\__/_/  |___/\___/_/   /_//_/|_|\___/_/   
 @2011
  
+Specify any combination of files within the Array passed to file smasher... 
+An array keyed to the provided extensions will be retuned where identical 
+extention'ed files will be trimmed of white space, tabs and new lines.
+
+This needs to be upgraded into OOP

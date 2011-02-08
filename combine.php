@@ -20,11 +20,13 @@ function cleanWhiteSpace($input){
 
 function fileSmash($aryFiles){
 	$aryReturnTypes = array();									// instantiate the return ary
-	
+
 	foreach($aryFiles as $key=>$value){							// loop the ary of files passed
+/*
 		if(!strpos($value, $_SERVER['DOCUMENT_ROOT'])){			// detect if a doc root was provided
 			$value = $_SERVER['DOCUMENT_ROOT']. "/" .$value;	// attach doc root making the path
 		}
+*/
 		$fileData = cleanWhiteSpace(file_get_contents($value));	// get the contents of the targeted file + strip whitespace
 		$tmpAry = explode(".",$value);							// explode path
 		$ext = strtolower($tmpAry[count($tmpAry)-1]);			// determin extention of file. force to lowercase to avoid issues with Capitalization diffrences.
@@ -35,17 +37,3 @@ function fileSmash($aryFiles){
 	}
 	return $aryReturnTypes;
 }
-
-/* 	Usage */
-// 	specify any combination of files within the Array passed to file smasher... 
-//	An aray keyed to the provided extentions will be retuned where identical 
-//	extentioned files will be trimmed of white space, tabs and new lines.
- 	$aryCombine = fileSmash(array("/inc/style.css","/inc/fake.css")); 
- 	echo "<style type='text/css'>";
-	echo $aryCombine['css'];
- 	echo "</style>";
- 
- 	echo "<script type='text/javascript'>";
-	echo $aryCombine['js'];
- 	echo "</script>";
- 
